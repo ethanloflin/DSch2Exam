@@ -1,0 +1,46 @@
+import random
+import math
+
+total_dollars = random.randint(0,101)
+total_cents = random.randint(0, 101)
+
+total = float(total_dollars) + float(total_cents)/100
+print('Your total is: ' + "${:.2f}".format(total))
+
+payment = round(random.uniform(total, total+100),2)
+print('Your payment was: ' + "${:.2f}".format(payment))
+
+change = payment - total
+print("Your change is: " + "${:,.2f}".format(change))
+
+          
+def findMin(V):
+      
+    deno = [.01, .05, .10, .25, .50, 1, 2, 5, 10, 20, 50, 
+            100]
+    n = len(deno)
+      
+    ans = []
+  
+    i = n - 1
+    while(i >= 0):
+          
+        while (V >= deno[i]):
+            V -= deno[i]
+            ans.append(deno[i])
+  
+        i -= 1
+  
+    for i in range(len(ans)):
+        
+        print(ans[i], end = " ")
+
+if __name__ == '__main__':
+    n = change
+
+    print("The minimum number of change for",
+            n, ": ", end = "")
+
+    
+    findMin(n)
+
