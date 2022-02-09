@@ -38,9 +38,8 @@ def findMin(V):
 if __name__ == '__main__':
     n = change
 
-    print("The minimum number of change for",
-            n, ": ", end = "")
-
+  print("The minimum number of change for",
+            ": ",  "${:,.2f}".format(change))
     
     findMin(n)
 
